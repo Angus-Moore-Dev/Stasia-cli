@@ -4,6 +4,7 @@ import figlet from 'figlet';
 import { Command } from 'commander';
 import hexToRgb from './utils/hexToRgb';
 import { supabase } from './lib/supabase';
+import fetchSecrets from './secrets/fetchSecrets';
 
 const hexColour = '#00fe49';
 const titleText = figlet.textSync('Stasia CLI', {
@@ -61,8 +62,15 @@ else
         case 'setup':
             console.log('SETUP!!!');
             break;
-        case 'projects':
-            console.log('PROJECTS!!!');
+        case 'secrets':
+            const projectId = args[1] ?? '';
+            const prod = args[2] ?? '';
+            if (projectId && prod)
+                fetchSecrets(projectId, prod.toLowerCase() === 'true' ? true : false).then(res => {
+                    console.log(res);
+                });
+            else console.log("You must provide a project id and prod boolean.");
+            console.log('stasia secrets [projectId] [prod]')
             break;
         default:
             console.log(`\u001b[38;2;${hexToRgb(hexColour)}m${titleText}\u001b[0m`);
