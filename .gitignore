@@ -1,3 +1,6 @@
 /node_modules
 /dist
+/stasia_auth
 .env
+sb-lkpdvssptqcmabcobtvz-auth-token
+sb-lkpdvssptqcmabcobtvz-auth-token-code-verifier
