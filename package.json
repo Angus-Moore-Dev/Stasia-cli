@@ -1,0 +1,31 @@
+{
+  "name": "stasia-cli",
+  "version": "1.0.0",
+  "description": "The CLI tool for Stasia",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "dev": "npx ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Angus-Moore-Dev/Stasia-cli.git"
+  },
+  "author": "Angus Moore",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/Angus-Moore-Dev/Stasia-cli/issues"
+  },
+  "homepage": "https://github.com/Angus-Moore-Dev/Stasia-cli#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.24.0",
+    "@types/commander": "^2.12.2",
+    "@types/figlet": "^1.5.6",
+    "commander": "^10.0.1",
+    "figlet": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "typescript": "^5.1.3"
+  }
+}
